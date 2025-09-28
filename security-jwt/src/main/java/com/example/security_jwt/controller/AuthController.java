@@ -72,7 +72,7 @@ public class AuthController {
 	}
 	
 	//login API
-	@PostMapping("*/login")
+	@PostMapping("/login")
 	public ResponseEntity<String> login(@RequestBody User loginRequest){
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginRequest.getUsername(),loginRequest.getPassword()));
